@@ -14,8 +14,4 @@ def common_elements(list_1=[], list_2=[]) -> bool:
         False if no common element
     '''
 
-    for x in list_1:
-        for y in list_2:
-            if x in list_2 or y in list_1:
-                return True
-            return False
+    return True if any(x in list_1 for x in list_2) else False
